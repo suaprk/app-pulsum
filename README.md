@@ -1,4 +1,4 @@
-![Image](https://github.com/user-attachments/assets/39c18804-9c1a-4400-812c-2338731cb452)
+![Image](https://github.com/user-attachments/assets/6cc9c03f-32ad-4871-9eba-71b0f8f25926)
 
 The app PULSUM is a plant and mental care application.
 
