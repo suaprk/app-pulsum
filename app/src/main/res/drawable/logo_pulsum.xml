@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+
+    <!-- 잎사귀 모양 로고 -->
+    <path
+        android:fillColor="@color/pulsum_primary_green"
+        android:pathData="M60,20 Q40,30 45,60 Q50,90 60,100 Q70,90 75,60 Q80,30 60,20 Z" />
+
+    <path
+        android:fillColor="@color/pulsum_primary_green"
+        android:pathData="M60,25 Q80,35 75,65 Q70,95 60,100 Q50,95 45,65 Q40,35 60,25 Z"
+        android:fillAlpha="0.7" />
+</vector>

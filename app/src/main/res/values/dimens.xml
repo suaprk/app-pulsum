@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="gallery_image_size">100dp</dimen>
+    <dimen name="gallery_margin">12dp</dimen>
+    <dimen name="gallery_corner_radius">8dp</dimen>
+    <dimen name="gallery_elevation">2dp</dimen>
+</resources>

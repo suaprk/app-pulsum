@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- 상단 이미지 영역 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- 선택된 이미지 -->
+        <ImageView
+            android:id="@+id/iv_selected_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:background="#F5F5F5" />
+
+        <!-- 상단 네비게이션 오버레이 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentTop="true"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <!-- 뒤로가기 버튼 -->
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_revert"
+                android:clickable="true"
+                android:focusable="true"
+                app:tint="@color/white"
+                android:contentDescription="뒤로가기" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <!-- 공유 버튼 -->
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_share"
+                android:clickable="true"
+                android:focusable="true"
+                app:tint="@color/white"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="공유" />
+
+            <!-- 편집 버튼 -->
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_edit"
+                android:clickable="true"
+                android:focusable="true"
+                app:tint="@color/white"
+                android:contentDescription="편집" />
+
+        </LinearLayout>
+
+        <!-- 좌우 네비게이션 버튼들 -->
+        <ImageView
+            android:id="@+id/iv_prev"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:src="@android:drawable/ic_media_previous"
+            android:background="@drawable/nav_button_background"
+            android:clickable="true"
+            android:focusable="true"
+            app:tint="@color/white"
+            android:contentDescription="이전 이미지" />
+
+        <ImageView
+            android:id="@+id/iv_next"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:src="@android:drawable/ic_media_next"
+            android:background="@drawable/nav_button_background"
+            android:clickable="true"
+            android:focusable="true"
+            app:tint="@color/white"
+            android:contentDescription="다음 이미지" />
+
+    </RelativeLayout>
+
+    <!-- 하단 정보 및 버튼 영역 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center">
+
+        <!-- 식물 이름 -->
+        <TextView
+            android:id="@+id/tv_plant_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monstera"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 설명 텍스트 -->
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Adds the selected image"
+            android:textColor="#999999"
+            android:textSize="14sp"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Add 버튼 -->
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Add"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="@drawable/button_green_rounded" />
+
+    </LinearLayout>
+
+</LinearLayout>

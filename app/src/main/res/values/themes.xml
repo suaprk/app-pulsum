@@ -1,0 +1,14 @@
+<!-- res/values/themes.xml -->
+<resources>
+    <style name="Theme.PULSUM" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">#4CAF50</item>
+        <item name="colorPrimaryVariant">#388E3C</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+    </style>
+
+    <style name="Theme.Pulsum.Fullscreen" parent="Theme.PULSUM">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+</resources>

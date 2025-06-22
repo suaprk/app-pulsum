@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- 상단 네비게이션 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <!-- 뒤로가기 버튼 -->
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_revert"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="뒤로가기" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <!-- Notifications 타이틀 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notifications"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <!-- 체크 버튼 -->
+        <ImageView
+            android:id="@+id/iv_check"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_save"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="저장" />
+
+    </LinearLayout>
+
+    <!-- 알림 설정 목록 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Water -->
+        <LinearLayout
+            android:id="@+id/ll_water"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="20dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/notification_item_background"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@android:drawable/ic_menu_mylocation"
+                app:tint="@color/pulsum_primary_green"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Water"
+                android:textColor="@color/pulsum_primary_green"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@android:drawable/ic_popup_reminder"
+                app:tint="#999999"
+                android:layout_marginEnd="12dp" />
+
+            <ImageView
+                android:id="@+id/iv_toggle_water"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:src="@drawable/toggle_on"
+                app:tint="@color/pulsum_primary_green"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+        <!-- Repot -->
+        <LinearLayout
+            android:id="@+id/ll_repot"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="20dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/notification_item_background"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@android:drawable/ic_menu_revert"
+                app:tint="@color/pulsum_primary_green"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Repot"
+                android:textColor="@color/pulsum_primary_green"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@android:drawable/ic_popup_reminder"
+                app:tint="#999999"
+                android:layout_marginEnd="12dp" />
+
+            <ImageView
+                android:id="@+id/iv_toggle_repot"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:src="@drawable/toggle_on"
+                app:tint="@color/pulsum_primary_green"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+        <!-- Clean -->
+        <LinearLayout
+            android:id="@+id/ll_clean"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="20dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/notification_item_background"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@android:drawable/ic_menu_delete"
+                app:tint="@color/pulsum_primary_green"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Clean"
+                android:textColor="@color/pulsum_primary_green"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@android:drawable/ic_popup_reminder"
+                app:tint="#999999"
+                android:layout_marginEnd="12dp" />
+
+            <ImageView
+                android:id="@+id/iv_toggle_clean"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:src="@drawable/toggle_off"
+                app:tint="@android:color/darker_gray"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+        <!-- Rotate -->
+        <LinearLayout
+            android:id="@+id/ll_rotate"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="20dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/notification_item_background"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@android:drawable/ic_menu_rotate"
+                app:tint="@color/pulsum_primary_green"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Rotate"
+                android:textColor="@color/pulsum_primary_green"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@android:drawable/ic_popup_reminder"
+                app:tint="#999999"
+                android:layout_marginEnd="12dp" />
+
+            <ImageView
+                android:id="@+id/iv_toggle_rotate"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:src="@drawable/toggle_on"
+                app:tint="@color/pulsum_primary_green"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+        <!-- Fertilizer -->
+        <LinearLayout
+            android:id="@+id/ll_fertilizer"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="20dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/notification_item_background"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@android:drawable/ic_menu_add"
+                app:tint="@color/pulsum_primary_green"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Fertilizer"
+                android:textColor="@color/pulsum_primary_green"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@android:drawable/ic_popup_reminder"
+                app:tint="#999999"
+                android:layout_marginEnd="12dp" />
+
+            <ImageView
+                android:id="@+id/iv_toggle_fertilizer"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:src="@drawable/toggle_on"
+                app:tint="@color/pulsum_primary_green"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+        <!-- Trim -->
+        <LinearLayout
+            android:id="@+id/ll_trim"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="20dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/notification_item_background"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@android:drawable/ic_menu_crop"
+                app:tint="@color/pulsum_primary_green"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Trim"
+                android:textColor="@color/pulsum_primary_green"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@android:drawable/ic_popup_reminder"
+                app:tint="#999999"
+                android:layout_marginEnd="12dp" />
+
+            <ImageView
+                android:id="@+id/iv_toggle_trim"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:src="@drawable/toggle_off"
+                app:tint="@android:color/darker_gray"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+        <!-- Scan -->
+        <LinearLayout
+            android:id="@+id/ll_scan"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="20dp"
+            android:background="@drawable/notification_item_background"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@android:drawable/ic_menu_view"
+                app:tint="@color/pulsum_primary_green"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Scan"
+                android:textColor="@color/pulsum_primary_green"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@android:drawable/ic_popup_reminder"
+                app:tint="#999999"
+                android:layout_marginEnd="12dp" />
+
+            <ImageView
+                android:id="@+id/iv_toggle_scan"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:src="@drawable/toggle_off"
+                app:tint="@android:color/darker_gray"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
